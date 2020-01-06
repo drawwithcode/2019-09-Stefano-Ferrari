@@ -1,6 +1,6 @@
 var uno, due, tre, quattro, cinque, sei, table;
 var valueX=0, valueY=0, valueZ=0;
-var iX=0, iY=0, iZ=0, i=0;
+var iX=0, iY=0, iZ=0, i=0, j=0;
 
 
 function preload(){
@@ -12,6 +12,7 @@ function preload(){
   cinque = loadImage("./assets/cinque.png");
   sei = loadImage("./assets/sei.png");
   logo = loadImage("./assets/bovisa.png");
+  broadway = loadFont("./assets/BROADW.TTF");
 }
 
 function setup() {
@@ -42,6 +43,12 @@ function draw() {
   }
   pop();
 
+  if(j!=0){
+  textFont(broadway);
+  textSize(windowHeight/25);
+  textAlign(CENTER);
+  text('Shake to roll the die', 0, 100);
+  }
 
   if(i>0){
     rotateX(iX);
@@ -75,6 +82,7 @@ function draw() {
   quad(0,0,100,100,0,100,100,100,100,0,100,100);
 
 
+
 }
 
 function touchEnded(event) {
@@ -86,6 +94,7 @@ function deviceShaken() {
   valueY=90*Math.floor(random(-5,5));
   valueZ=90*Math.floor(random(-5,5));
   i=30;
+  j=1;
 }
 
 function touchMoved(){
