@@ -47,7 +47,7 @@ function draw() {
   textFont(broadway);
   textSize(windowHeight/25);
   textAlign(CENTER);
-  text('Shake to roll the die', 0, 100);
+  text('Shake to roll the die', 0, (windowHeight/2)-50);
   }
 
   if(i>0){
