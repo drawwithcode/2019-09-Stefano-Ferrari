@@ -43,7 +43,7 @@ function draw() {
   }
   pop();
 
-  if(j!=0){
+  if(j==0){
   textFont(broadway);
   textSize(windowHeight/25);
   textAlign(CENTER);
